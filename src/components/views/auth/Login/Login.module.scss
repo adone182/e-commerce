@@ -56,6 +56,32 @@
       border-radius: 8px;
       font-size: 16px;
       font-weight: semibold;
+      cursor: pointer;
+    }
+
+    &__other {
+      margin: 20px auto;
+
+      &__button {
+        background-color: #eaeaea;
+        color: #333;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: semibold;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        i {
+          font-size: 24px;
+          color: blue;
+        }
+      }
     }
   }
 

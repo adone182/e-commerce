@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Login.module.scss";
-import { useRouter, useSearchParams } from "next/navigation";
+import { redirect, useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { signIn } from "next-auth/react";
 
@@ -90,6 +90,20 @@ const LoginView = () => {
           <button type="submit" className={styles.login__form__button}>
             {isLoading ? "Loading..." : "Login"}
           </button>
+          <div className={styles.login__form__other}>
+            <button
+              className={styles.login__form__other__button}
+              type="button"
+              onClick={() =>
+                signIn("google", {
+                  callbackUrl: callbackUrl,
+                  redirect: false,
+                })
+              }
+            >
+              <i className="bx bxl-google-plus-circle" /> Login With Google
+            </button>
+          </div>
         </form>
       </div>
       <p className={styles.login__link}>
