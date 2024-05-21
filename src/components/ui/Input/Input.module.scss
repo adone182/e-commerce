@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+
+  &__label {
+    font-size: 18px;
+    font-weight: semibold;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    padding: 10px;
+    background-color: #eee;
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+  }
+}

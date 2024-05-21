@@ -2,6 +2,8 @@ import Link from "next/link";
 import styles from "./Register.module.scss";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
+import Input from "@/components/ui/Input";
+import Button from "@/components/ui/Button";
 
 const RegisterView = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -55,74 +57,37 @@ const RegisterView = () => {
       {error && <p className={styles.register__error}>{error}</p>}
       <div className={styles.register__form}>
         <form onSubmit={handleSubmit}>
-          <div className={styles.register__form__item}>
-            <label
-              htmlFor="fullname"
-              className={styles.register__form__item__label}
-            >
-              Fullname
-            </label>
-            <input
-              type="text"
-              name="fullname"
-              id="fullname"
-              className={styles.register__form__item__input}
-              placeholder="Input your fullname"
-              required
-            />
-          </div>
-          <div className={styles.register__form__item}>
-            <label
-              htmlFor="email"
-              className={styles.register__form__item__label}
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className={styles.register__form__item__input}
-              placeholder="Input your email"
-              required
-            />
-          </div>
-          <div className={styles.register__form__item}>
-            <label
-              htmlFor="phone"
-              className={styles.register__form__item__label}
-            >
-              Phone
-            </label>
-            <input
-              type="text"
-              name="phone"
-              id="phone"
-              className={styles.register__form__item__input}
-              placeholder="Input your phone"
-              required
-            />
-          </div>
-          <div className={styles.register__form__item}>
-            <label
-              htmlFor="password"
-              className={styles.register__form__item__label}
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              className={styles.register__form__item__input}
-              placeholder="*********"
-              autoComplete="current-password"
-              required
-            />
-          </div>
-          <button type="submit" className={styles.register__form__button}>
+          <Input
+            label="Fullname"
+            name="fullname"
+            type="text"
+            placeholder="Input your fullname"
+          />
+          <Input
+            label="Email"
+            name="email"
+            type="email"
+            placeholder="Input your email"
+          />
+          <Input
+            label="Phone"
+            name="phone"
+            type="text"
+            placeholder="Input your phone"
+          />
+          <Input
+            label="Password"
+            name="password"
+            type="password"
+            placeholder="********"
+          />
+          <Button
+            type="submit"
+            variant="primary"
+            className={styles.register__form__button}
+          >
             {isLoading ? "Loading..." : "Register"}
-          </button>
+          </Button>
         </form>
       </div>
       <p className={styles.register__link}>

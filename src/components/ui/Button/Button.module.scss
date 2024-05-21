@@ -1,0 +1,20 @@
+.button {
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: semibold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary {
+  background-color: blue;
+  color: #fff;
+}
+
+.secondary {
+  background-color: #eaeaea;
+  color: #333;
+}

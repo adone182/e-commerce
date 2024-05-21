@@ -26,55 +26,17 @@
     border-radius: 8px;
     margin-bottom: 20px;
 
-    &__item {
-      display: flex;
-      flex-direction: column;
-      margin: 20px 0;
-
-      &__label {
-        font-size: 18px;
-        font-weight: semibold;
-        margin-bottom: 5px;
-      }
-
-      &__input {
-        padding: 10px;
-        background-color: #eee;
-        margin-top: 5px;
-        outline: none;
-        border: none;
-        border-radius: 8px;
-      }
-    }
-
     &__button {
-      background-color: blue;
-      color: #fff;
       width: 100%;
-      padding: 10px;
-      border: none;
       border-radius: 8px;
-      font-size: 16px;
-      font-weight: semibold;
-      cursor: pointer;
     }
 
     &__other {
       margin: 20px auto;
 
       &__button {
-        background-color: #eaeaea;
-        color: #333;
         width: 100%;
-        padding: 10px;
-        border: none;
         border-radius: 8px;
-        font-size: 16px;
-        font-weight: semibold;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 5px;
 
         i {
